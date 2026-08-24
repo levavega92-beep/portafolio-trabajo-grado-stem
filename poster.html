@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Póster Digital - Trabajo de Grado</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef1f8;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        .encabezado {
+            background: linear-gradient(135deg, #102b5c, #1e3d78);
+            color: white;
+            padding: 25px 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .encabezado::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            background: #f5b335;
+        }
+
+        .encabezado-contenido {
+            max-width: 1500px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 180px 1fr 180px;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo-universidad {
+            width: 160px;
+            max-height: 150px;
+            object-fit: contain;
+        }
+
+        .logo-colegio {
+            width: 150px;
+            max-height: 150px;
+            object-fit: contain;
+            justify-self: end;
+        }
+
+        .titulo {
+
+            text-align: center;
+        }
+
+        .titulo h2 {
+            color: #f5b335;
+            font-size: 22px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .titulo h1 {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
+        .fecha {
+            display: inline-block;
+            margin-top: 15px;
+            background: #f5b335;
+            color: #102b5c;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+            width: 95%;
+            max-width: 1500px;
+            margin: 30px auto;
+        }
+
+        /* =========================
+           TITULOS DE SECCION
+        ========================= */
+
+        .titulo-seccion {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0 18px;
+            color: #173b75;
+        }
+
+        .titulo-seccion::before,
+        .titulo-seccion::after {
+            content: "";
+            height: 3px;
+            background: #173b75;
+            flex: 1;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 27px;
+            text-align: center;
+        }
+
+        /* =========================
+           JUSTIFICACION
+        ========================= */
+
+        .justificacion {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .tarjeta {
+
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            min-height: 280px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            border-top: 8px solid #315ca8;
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta h3 {
+            text-align: center;
+            color: #173b75;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .icono {
+            width: 70px;
+            height: 70px;
+            margin: 5px auto 15px;
+
+            border-radius: 50%;
+            background: #edf2ff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 35px;
+        }
+
+        .tarjeta p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* Colores de tarjetas */
+
+        .pedagogica {
+            border-top-color: #2864a7;
+        }
+
+        .metodologica {
+            border-top-color: #6950a5;
+        }
+
+        .institucional {
+            border-top-color: #43a047;
+        }
+
+        .contextual {
+            border-top-color: #f39c12;
+        }
+
+        .academica {
+            border-top-color: #199aa5;
+        }
+
+        /* =========================
+           OBJETIVOS
+        ========================= */
+
+        .objetivos {
+
+            display: grid;
+            grid-template-columns: 1.3fr 3fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .objetivo-general {
+
+            background: #123a73;
+            color: white;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+        }
+
+        .objetivo-general h3 {
+            color: #f5b335;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .objetivo-general .icono {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .objetivo-general p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* =========================
+           OBJETIVOS ESPECIFICOS
+        ========================= */
+
+        .objetivos-especificos {
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .objetivo {
+
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 17px;
+
+            text-align: center;
+
+            border: 2px solid #d9e1f2;
+
+            position: relative;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        .numero {
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: #315ca8;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: -32px auto 10px;
+
+            font-weight: bold;
+            font-size: 18px;
+
+            border: 4px solid #eef1f8;
+        }
+
+        .objetivo h3 {
+
+            color: #173b75;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .objetivo p {
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           ARTICULACION
+        ========================= */
+
+        .articulacion {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            margin-top: 25px;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+
+            text-align: center;
+        }
+
+        .articulacion h2 {
+
+            color: #173b75;
+
+            margin-bottom: 20px;
+        }
+
+        .flujo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .flujo-item {
+
+            background: #edf2ff;
+
+            padding: 15px 20px;
+
+            border-radius: 15px;
+
+            font-weight: bold;
+
+            color: #173b75;
+        }
+
+        .flecha {
+
+            font-size: 25px;
+
+            color: #f5a900;
+
+            font-weight: bold;
+        }
+
+        /* =========================
+           AUTORES
+        ========================= */
+
+        .autores {
+
+            margin-top: 25px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+        }
+
+        .autores h2 {
+
+            color: #173b75;
+
+            margin-bottom: 15px;
+        }
+
+        .lista-autores p {
+
+            margin: 7px 0;
+        }
+
+        .datos-programa {
+
+            border-left: 3px solid #f5b335;
+
+            padding-left: 25px;
+        }
+
+        /* =========================
+           BOTON
+        ========================= */
+
+        .volver {
+
+            text-align: center;
+
+            margin: 30px 0;
+        }
+
+        .boton {
+
+            display: inline-block;
+
+            background: #f5ad27;
+
+            color: #102b5c;
+
+            text-decoration: none;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+
+            background: #ffc65b;
+
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           PIE
+        ========================= */
+
+        footer {
+
+            background: #102b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            margin-top: 30px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .justificacion {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .objetivos {
+
+                grid-template-columns: 1fr;
+            }
+
+            .objetivos-especificos {
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .encabezado-contenido {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .logo-universidad,
+            .logo-colegio {
+
+                justify-self: center;
+            }
+
+            .titulo h1 {
+
+                font-size: 21px;
+            }
+
+            .justificacion {
+
+                grid-template-columns: 1fr;
+            }
+
+            .objetivos-especificos {
+
+                grid-template-columns: 1fr;
+            }
+
+            .autores {
+
+                grid-template-columns: 1fr;
+            }
+
+            .datos-programa {
+
+                border-left: none;
+
+                border-top: 3px solid #f5b335;
+
+                padding-left: 0;
+
+                padding-top: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     ENCABEZADO INSTITUCIONAL
+================================================== -->
+
+<header class="encabezado">
+
+    <div class="encabezado-contenido">
+
+        <!-- LOGO UNIVERSIDAD -->
+
+        <img
+            src="imagenes/logo-unicartagena.png"
+            alt="Universidad de Cartagena"
+            class="logo-universidad"
+        >
+
+
+        <!-- TITULO -->
+
+        <div class="titulo">
+
+            <h2>
+                MAESTRÍA EN RECURSOS DIGITALES APLICADOS A LA EDUCACIÓN
+            </h2>
+
+            <h1>
+
+                Diseño e implementación de un objeto virtual de aprendizaje
+                gamificado con enfoque STEM para fortalecer las competencias
+                investigativas en estudiantes de grado sexto de la Institución
+                Educativa Colegio Gibraltar, Toledo, Norte de Santander.
+
+            </h1>
+
+            <div class="fecha">
+                MAYO / 2026
+            </div>
+
+        </div>
+
+
+        <!-- LOGO COLEGIO -->
+
+        <img
+            src="imagenes/escudo-colegio.png"
+            alt="Escudo Institución Educativa Colegio Gibraltar"
+            class="logo-colegio"
+        >
+
+    </div>
+
+</header>
+
+
+
+<main class="contenedor">
+
+
+<!-- ==================================================
+     JUSTIFICACIÓN
+================================================== -->
+
+<div class="titulo-seccion">
+
+    <h2>
+        JUSTIFICACIÓN DEL TRABAJO DE GRADO
+    </h2>
+
+</div>
+
+
+<section class="justificacion">
+
+
+    <!-- PEDAGÓGICA -->
+
+    <article class="tarjeta pedagogica">
+
+        <h3>PEDAGÓGICA</h3>
+
+        <div class="icono">
+            📖⚙️
+        </div>
+
+        <p>
+            Resume la necesidad de un enfoque pedagógico
+            de gamificación para favorecer experiencias
+            de aprendizaje más activas y motivadoras.
+        </p>
+
+    </article>
+
+
+    <!-- METODOLÓGICA -->
+
+    <article class="tarjeta metodologica">
+
+        <h3>METODOLÓGICA</h3>
+
+        <div class="icono">
+            🧪📊
+        </div>
+
+        <p>
+            Resume las estrategias para el diseño de
+            experiencias y métodos de gamificación que
+            orienten el desarrollo de experiencias de
+            aprendizaje significativas.
+        </p>
+
+    </article>
+
+
+    <!-- INSTITUCIONAL -->
+
+    <article class="tarjeta institucional">
+
+        <h3>INSTITUCIONAL</h3>
+
+        <div class="icono">
+            🤝🌎
+        </div>
+
+        <p>
+            Mejora la calidad educativa de la institución
+            mediante un enfoque innovador basado en
+            la gamificación.
+        </p>
+
+    </article>
+
+
+    <!-- CONTEXTUAL -->
+
+    <article class="tarjeta contextual">
+
+        <h3>CONTEXTUAL</h3>
+
+        <div class="icono">
+            🏫🏔️
+        </div>
+
+        <p>
+            Aborda las necesidades de la Institución
+            Educativa Colegio Gibraltar mediante una
+            propuesta de gamificación pertinente a
+            su contexto y realidad.
+        </p>
+
+    </article>
+
+
+    <!-- ACADÉMICA -->
+
+    <article class="tarjeta academica">
+
+        <h3>ACADÉMICA</h3>
+
+        <div class="icono">
+            🎓🔬
+        </div>
+
+        <p>
+            Fortalece las competencias investigativas
+            de los estudiantes mediante una propuesta
+            educativa gamificada.
+        </p>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     OBJETIVOS
+================================================== -->
+
+<div class="titulo-seccion">
+
+    <h2>
+        OBJETIVOS DEL TRABAJO DE GRADO
+    </h2>
+
+</div>
+
+
+<section class="objetivos">
+
+
+    <!-- OBJETIVO GENERAL -->
+
+    <article class="objetivo-general">
+
+        <h3>
+            OBJETIVO GENERAL
+        </h3>
+
+        <div class="icono">
+            🚀⚙️
+        </div>
+
+        <p>
+
+            Diseñar e implementar un objeto virtual de
+            aprendizaje gamificado con enfoque STEM para
+            fortalecer las competencias investigativas en
+            estudiantes de grado sexto de la Institución
+            Educativa Colegio Gibraltar, Toledo,
+            Norte de Santander.
+
+        </p>
+
+    </article>
+
+
+
+    <!-- OBJETIVOS ESPECÍFICOS -->
+
+    <div class="objetivos-especificos">
+
+
+        <!-- 1 -->
+
+        <article class="objetivo">
+
+            <div class="numero">
+                1
+            </div>
+
+            <div class="icono">
+                🧠❓
+            </div>
+
+            <h3>
+                DIAGNOSTICAR
+            </h3>
+
+            <p>
+                El nivel de competencias investigativas
+                de los estudiantes antes de la
+                implementación del OVA.
+            </p>
+
+        </article>
+
+
+        <!-- 2 -->
+
+        <article class="objetivo">
+
+            <div class="numero">
+                2
+            </div>
+
+            <div class="icono">
+                🎨🖌️
+            </div>
+
+            <h3>
+                DISEÑAR
+            </h3>
+
+            <p>
+                El objeto virtual de aprendizaje
+                gamificado con enfoque STEM de acuerdo
+                con las necesidades identificadas.
+            </p>
+
+        </article>
+
+
+        <!-- 3 -->
+
+        <article class="objetivo">
+
+            <div class="numero">
+                3
+            </div>
+
+            <div class="icono">
+                💻🚀
+            </div>
+
+            <h3>
+                IMPLEMENTAR
+            </h3>
+
+            <p>
+                El objeto virtual de aprendizaje
+                gamificado con enfoque STEM con los
+                estudiantes de grado sexto.
+            </p>
+
+        </article>
+
+
+        <!-- 4 -->
+
+        <article class="objetivo">
+
+            <div class="numero">
+                4
+            </div>
+
+            <div class="icono">
+                ⚖️
+            </div>
+
+            <h3>
+                VALORAR
+            </h3>
+
+            <p>
+                El impacto del objeto virtual de
+                aprendizaje gamificado con enfoque
+                STEM en las competencias investigativas
+                de los estudiantes.
+            </p>
+
+        </article>
+
+
+        <!-- 5 -->
+
+        <article class="objetivo">
+
+            <div class="numero">
+                5
+            </div>
+
+            <div class="icono">
+                📊🔍
+            </div>
+
+            <h3>
+                ANALIZAR
+            </h3>
+
+            <p>
+                Los resultados de la valoración para
+                determinar la efectividad del objeto
+                virtual de aprendizaje.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ARTICULACIÓN
+================================================== -->
+
+<section class="articulacion">
+
+    <h2>
+        ARTICULACIÓN DE LA PROPUESTA
+    </h2>
+
+    <div class="flujo">
+
+        <div class="flujo-item">
+            🌎 Contexto
+        </div>
+
+        <div class="flecha">
+            →
+        </div>
+
+        <div class="flujo-item">
+            💻 OVA
+        </div>
+
+        <div class="flecha">
+            +
+        </div>
+
+        <div class="flujo-item">
+            🎮 Gamificación
+        </div>
+
+        <div class="flecha">
+            +
+        </div>
+
+        <div class="flujo-item">
+            🔬 STEM
+        </div>
+
+        <div class="flecha">
+            →
+        </div>
+
+        <div class="flujo-item">
+            🏆 Competencias investigativas
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     AUTORES
+================================================== -->
+
+<section class="autores">
+
+
+    <div>
+
+        <h2>
+            AUTORES
+        </h2>
+
+        <div class="lista-autores">
+
+            <p>
+                <strong>•</strong>
+                Samuel Quintero Velandia
+            </p>
+
+            <p>
+                <strong>•</strong>
+                Leidy Andrea Rodríguez Delgado
+            </p>
+
+            <p>
+                <strong>•</strong>
+                Leidy Yadira Velazco García
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="datos-programa">
+
+        <h2>
+            INFORMACIÓN ACADÉMICA
+        </h2>
+
+        <p>
+            <strong>
+                Universidad de Cartagena
+            </strong>
+        </p>
+
+        <p>
+            Facultad de Ciencias Sociales y Educación
+        </p>
+
+        <p>
+            Maestría en Recursos Digitales Aplicados
+            a la Educación
+        </p>
+
+        <p>
+            Trabajo de Grado I
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     BOTÓN VOLVER
+================================================== -->
+
+<div class="volver">
+
+    <a
+        href="menu.html"
+        class="boton"
+    >
+        ← VOLVER AL MENÚ
+    </a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     PIE DE PÁGINA
+================================================== -->
+
+<footer>
+
+    Institución Educativa Colegio Gibraltar ·
+    Toledo · Norte de Santander · Colombia
+
+    <br><br>
+
+    Portafolio digital del trabajo de grado
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avatares - Portafolio Digital</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f3fb;
+            color: #222;
+            min-height: 100vh;
+            border-top: 4px solid #292f8f;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+
+        .contenedor {
+            width: 90%;
+            max-width: 1150px;
+            margin: 45px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 38px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        /* ENCABEZADO */
+
+        .etiqueta {
+            color: #292f8f;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #17206b;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .introduccion {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* CONTENEDOR DE LOS AVATARES */
+
+        .avatares {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        /* TARJETA */
+
+        .avatar-card {
+            border: 1px solid #d4d8ef;
+            border-radius: 15px;
+            padding: 22px;
+            background: #fafbff;
+        }
+
+        .avatar-card h2 {
+            color: #292f8f;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .avatar-descripcion {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        /* VIDEO */
+
+        .video-contenedor {
+            width: 100%;
+            background: #ffffff;
+            border: 2px dashed #c3c8e8;
+            border-radius: 14px;
+            padding: 12px;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            background: #000;
+        }
+
+        /* TEXTO DEBAJO DEL VIDEO */
+
+        .titulo-video {
+            color: #292f8f;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .texto-video {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* EVIDENCIA */
+
+        .evidencia {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f1f3ff;
+            border-left: 5px solid #f6ad32;
+            border-radius: 8px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .evidencia strong {
+            color: #292f8f;
+        }
+
+        /* BOTÓN VOLVER */
+
+        .volver {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 25px;
+            background: #f6ad32;
+            color: #17206b;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            background: #ffc45c;
+            transform: translateY(-2px);
+        }
+
+        /* PIE */
+
+        .pie {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .avatares {
+                grid-template-columns: 1fr;
+            }
+
+            .contenedor {
+                width: 94%;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="contenedor">
+
+
+        <!-- =============================== -->
+        <!-- ENCABEZADO -->
+        <!-- =============================== -->
+
+        <header>
+
+            <div class="etiqueta">
+                PORTAFOLIO · IDENTIFICANDO
+            </div>
+
+            <h1>
+                Avatares
+            </h1>
+
+            <p class="introduccion">
+                En este espacio se presentan los avatares elaborados
+                como parte del proceso de identificación del proyecto.
+                Cada avatar incorpora imagen, voz y narrativa para
+                contextualizar la propuesta.
+            </p>
+
+        </header>
+
+
+        <!-- =============================== -->
+        <!-- AVATARES -->
+        <!-- =============================== -->
+
+        <section class="avatares">
+
+
+            <!-- =============================== -->
+            <!-- AVATAR 1 -->
+            <!-- =============================== -->
+
+            <article class="avatar-card">
+
+                <h2>
+                    Avatar 1
+                </h2>
+
+                <p class="avatar-descripcion">
+                    Presentación del primer avatar del proyecto.
+                </p>
+
+
+                <div class="video-contenedor">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/avatar1.mp4"
+                            type="video/mp4">
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+
+                <h3 class="titulo-video">
+                    Presentación del Avatar 1
+                </h3>
+
+                <p class="texto-video">
+                    En este video se presenta el primer avatar
+                    desarrollado para el proyecto y su función
+                    dentro de la experiencia de aprendizaje.
+                </p>
+
+            </article>
+
+
+
+            <!-- =============================== -->
+            <!-- AVATAR 2 -->
+            <!-- =============================== -->
+
+            <article class="avatar-card">
+
+                <h2>
+                    Avatar 2
+                </h2>
+
+                <p class="avatar-descripcion">
+                    Presentación del segundo avatar del proyecto.
+                </p>
+
+
+                <div class="video-contenedor">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="videos/avatar2.mp4"
+                            type="video/mp4">
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+
+                <h3 class="titulo-video">
+                    Presentación del Avatar 2
+                </h3>
+
+                <p class="texto-video">
+                    En este video se presenta el segundo avatar
+                    desarrollado para el proyecto y su función
+                    dentro de la experiencia de aprendizaje.
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =============================== -->
+        <!-- EVIDENCIA -->
+        <!-- =============================== -->
+
+        <section class="evidencia">
+
+            <strong>
+                Evidencia del proceso:
+            </strong>
+
+            Los videos de los avatares incorporan imagen y audio
+            como parte de la presentación del producto desarrollado.
+            Esta evidencia forma parte de la fase de identificación
+            del proyecto.
+
+        </section>
+
+
+
+        <!-- =============================== -->
+        <!-- VOLVER AL MENÚ -->
+        <!-- =============================== -->
+
+        <a href="menu.html" class="volver">
+
+            ← Volver al menú
+
+        </a>
+
+
+
+        <!-- =============================== -->
+        <!-- PIE DE PÁGINA -->
+        <!-- =============================== -->
+
+        <footer class="pie">
+
+            Portafolio digital · Trabajo de grado
+
+        </footer>
+
+
+    </main>
+
+
+</body>
+
+</html>

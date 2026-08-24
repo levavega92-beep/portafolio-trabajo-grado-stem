@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio - Trabajo de Grado</title>
+
+    <style>
+
+        /* ==============================
+           CONFIGURACIÓN GENERAL
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #17206b, #30359a);
+            color: #222;
+            min-height: 100vh;
+        }
+
+
+        /* ==============================
+           PORTADA
+        ============================== */
+
+        .portada {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+
+        /* ==============================
+           CONTENEDOR PRINCIPAL
+        ============================== */
+
+        .contenedor {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+        }
+
+
+        /* ==============================
+           ENCABEZADO
+        ============================== */
+
+        .encabezado {
+            background: #252b82;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .logo {
+            width: 180px;
+            max-height: 130px;
+            object-fit: contain;
+        }
+
+
+        /* ==============================
+           INFORMACIÓN DEL TRABAJO
+        ============================== */
+
+        .titulo {
+            text-align: center;
+            padding: 35px 50px 25px;
+        }
+
+        .titulo h1 {
+            color: #252b82;
+            font-size: 28px;
+            line-height: 1.45;
+        }
+
+
+        /* ==============================
+           IMAGEN UNIVERSIDAD
+        ============================== */
+
+        .imagen-universidad {
+            width: 100%;
+            padding: 10px 50px 35px;
+            text-align: center;
+        }
+
+        .imagen-universidad img {
+            width: 100%;
+            max-width: 1000px;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.20);
+        }
+
+
+        /* ==============================
+           SECCIÓN AUTORES
+        ============================== */
+
+        .seccion {
+            padding: 35px 50px;
+        }
+
+        .seccion h2 {
+            text-align: center;
+            color: #252b82;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+
+        .autores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .autor {
+            background: #f5f6ff;
+            border-radius: 18px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .autor:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .autor img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #252b82;
+            margin-bottom: 15px;
+        }
+
+        .autor h3 {
+            color: #252b82;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .autor p {
+            color: #555;
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           DIRECTORA Y TUTOR
+        ============================== */
+
+        .personas-academicas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 20px 50px 40px;
+        }
+
+        .persona {
+            background: #f5f6ff;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .persona img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #252b82;
+            margin-bottom: 15px;
+        }
+
+        .persona h3 {
+            color: #252b82;
+            font-size: 19px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .persona p {
+            color: #555;
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           INFORMACIÓN UNIVERSIDAD
+        ============================== */
+
+        .informacion-universidad {
+            background: #eef0ff;
+            text-align: center;
+            padding: 30px 20px;
+            line-height: 1.8;
+        }
+
+        .informacion-universidad h3 {
+            color: #252b82;
+            margin-bottom: 10px;
+        }
+
+
+        /* ==============================
+           BOTÓN PORTAFOLIO
+        ============================== */
+
+        .ingreso {
+            text-align: center;
+            padding: 30px 20px 45px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #f6ad32;
+            color: #17206b;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #ffc45c;
+            transform: scale(1.05);
+        }
+
+
+        /* ==============================
+           PIE DE PÁGINA
+        ============================== */
+
+        .pie {
+            background: #252b82;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 800px) {
+
+            .autores {
+                grid-template-columns: 1fr;
+            }
+
+            .personas-academicas {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .titulo {
+                padding: 30px 20px;
+            }
+
+            .titulo h1 {
+                font-size: 21px;
+            }
+
+            .imagen-universidad {
+                padding: 10px 20px 30px;
+            }
+
+            .seccion {
+                padding: 30px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         PORTADA PRINCIPAL
+    ========================================== -->
+
+    <section class="portada">
+
+        <div class="contenedor">
+
+
+            <!-- =================================
+                 ESCUDO UNIVERSIDAD
+            ================================== -->
+
+            <header class="encabezado">
+
+                <img
+                    src="imagenes/logo-unicartagena.png"
+                    alt="Escudo de la Universidad de Cartagena"
+                    class="logo"
+                >
+
+            </header>
+
+
+
+            <!-- =================================
+                 TÍTULO DEL TRABAJO
+            ================================== -->
+
+            <section class="titulo">
+
+                <h1>
+
+                    Diseño e implementación de un objeto virtual de aprendizaje
+                    gamificado con enfoque STEM para fortalecer las competencias
+                    investigativas en estudiantes de grado sexto de la
+                    Institución Educativa Colegio Gibraltar, Toledo, Norte de
+                    Santander.
+
+                </h1>
+
+            </section>
+
+
+
+            <!-- =================================
+                 IMAGEN UNIVERSIDAD
+            ================================== -->
+
+            <section class="imagen-universidad">
+
+                <img
+                    src="imagenes/universidad.jpg"
+                    alt="Universidad de Cartagena"
+                >
+
+            </section>
+
+
+
+            <!-- =================================
+                 AUTORES
+            ================================== -->
+
+            <section class="seccion">
+
+                <h2>
+                    Autores del trabajo de grado
+                </h2>
+
+
+                <div class="autores">
+
+
+                    <!-- AUTOR 1 -->
+
+                    <article class="autor">
+
+                        <img
+                            src="imagenes/autor1.jpeg"
+                            alt="Samuel Quintero Velandia"
+                        >
+
+                        <h3>
+                            Samuel Quintero Velandia
+                        </h3>
+
+                        <p>
+                            Autor 1
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- AUTOR 2 -->
+
+                    <article class="autor">
+
+                        <img
+                            src="imagenes/autor2.jpeg"
+                            alt="Leidy A. Rodríguez Delgado"
+                        >
+
+                        <h3>
+                            Leidy A. Rodríguez Delgado
+                        </h3>
+
+                        <p>
+                            Autor 2
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- AUTOR 3 -->
+
+                    <article class="autor">
+
+                        <img
+                            src="imagenes/autor3.jpeg"
+                            alt="Leidy Y. Velazco García"
+                        >
+
+                        <h3>
+                            Leidy Y. Velazco García
+                        </h3>
+
+                        <p>
+                            Autor 3
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 DIRECTORA Y DOCENTE TUTOR
+            ================================== -->
+
+            <section class="personas-academicas">
+
+
+                <!-- DIRECTORA -->
+
+                <article class="persona">
+
+                    <img
+                        src="imagenes/director.jpeg"
+                        alt="Jazmín del Rosario Caballero Jiménez"
+                    >
+
+                    <h3>
+                        Doctorante TechEd
+                        <br>
+                        Jazmín del Rosario Caballero Jiménez
+                    </h3>
+
+                    <p>
+                        Directora del trabajo de grado
+                    </p>
+
+                </article>
+
+
+
+                <!-- DOCENTE TUTOR -->
+
+                <article class="persona">
+
+                    <img
+                        src="imagenes/tutor.jpeg"
+                        alt="Camilo Andrés Brito Daza"
+                    >
+
+                    <h3>
+                        Mag. Camilo Andrés Brito Daza
+                    </h3>
+
+                    <p>
+                        Docente tutor de la asignatura
+                    </p>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 INFORMACIÓN ACADÉMICA
+            ================================== -->
+
+            <section class="informacion-universidad">
+
+                <h3>
+                    Universidad de Cartagena
+                </h3>
+
+                <p>
+                    Facultad de Ciencias Sociales y Educación
+                </p>
+
+                <p>
+                    Maestría en Recursos Digitales Aplicados a la Educación
+                </p>
+
+                <p>
+                    Trabajo de Grado
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================
+                 BOTÓN PARA INGRESAR AL MENÚ
+            ================================== -->
+
+            <section class="ingreso">
+
+                <a
+                    href="menu.html"
+                    class="boton"
+                >
+
+                    INGRESAR AL PORTAFOLIO
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PIE DE PÁGINA
+            ================================== -->
+
+            <footer class="pie">
+
+                <p>
+                    Institución Educativa Colegio Gibraltar
+                </p>
+
+                <p>
+                    Toledo · Norte de Santander · Colombia
+                </p>
+
+                <p>
+                    Portafolio digital del trabajo de grado
+                </p>
+
+            </footer>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

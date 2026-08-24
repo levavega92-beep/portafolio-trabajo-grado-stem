@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Menú - Portafolio Digital</title>
+
+
+    <style>
+
+        /* =====================================
+           CONFIGURACIÓN GENERAL
+        ===================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17206b,
+                    #30359a
+                );
+
+            min-height: 100vh;
+
+            color: #222;
+
+        }
+
+
+        /* =====================================
+           ENCABEZADO
+        ===================================== */
+
+        header {
+
+            background: #252b82;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+        }
+
+
+        header h1 {
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        header p {
+
+            font-size: 17px;
+
+            opacity: 0.95;
+
+        }
+
+
+        /* =====================================
+           CONTENEDOR
+        ===================================== */
+
+        .contenedor {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+        }
+
+
+        /* =====================================
+           TARJETAS DE SECCIÓN
+        ===================================== */
+
+        .seccion {
+
+            background: white;
+
+            margin-bottom: 28px;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.20);
+
+        }
+
+
+        .seccion h2 {
+
+            color: #252b82;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 10px;
+
+            border-bottom:
+                3px solid #252b82;
+
+            font-size: 24px;
+
+        }
+
+
+        /* =====================================
+           BOTONES
+        ===================================== */
+
+        .botones {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 16px;
+
+        }
+
+
+        .boton {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 65px;
+
+            padding: 15px;
+
+            background: #30308f;
+
+            color: white;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition:
+                transform 0.25s,
+                background 0.25s;
+
+        }
+
+
+        .boton:hover {
+
+            background: #4b4bb5;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 6px 15px
+                rgba(0,0,0,0.20);
+
+        }
+
+
+        /* =====================================
+           PROPUESTA METODOLÓGICA
+        ===================================== */
+
+        .subtitulo {
+
+            color: #252b82;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin:
+
+                25px
+
+                0
+
+                15px;
+
+            padding-left: 10px;
+
+            border-left:
+                5px solid #f6ad32;
+
+        }
+
+
+        /* =====================================
+           BOTÓN REGRESAR
+        ===================================== */
+
+        .regresar {
+
+            text-align: center;
+
+            margin: 35px 0;
+
+        }
+
+
+        .boton-regresar {
+
+            display: inline-block;
+
+            padding:
+                14px 30px;
+
+            background: #f6ad32;
+
+            color: #17206b;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .boton-regresar:hover {
+
+            background: #ffc45c;
+
+            transform:
+                scale(1.05);
+
+        }
+
+
+        /* =====================================
+           PIE DE PÁGINA
+        ===================================== */
+
+        footer {
+
+            background: #252b82;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 22px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+
+                font-size: 25px;
+
+            }
+
+
+            .seccion {
+
+                padding: 22px;
+
+            }
+
+
+            .botones {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         ENCABEZADO
+    ====================================== -->
+
+    <header>
+
+        <h1>
+            PORTAFOLIO DIGITAL
+        </h1>
+
+        <p>
+            Proceso de diseño e innovación educativa
+        </p>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main class="contenedor">
+
+
+        <!-- =================================
+             1. IDENTIFICANDO
+        ================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                1. Identificando
+            </h2>
+
+
+            <div class="botones">
+
+
+                <!-- AVATAR -->
+
+                <a
+                    href="avatar.html"
+                    class="boton"
+                >
+
+                    Avatar
+
+                </a>
+
+
+
+                <!-- PÓSTER DIGITAL -->
+
+                <a
+                    href="poster.html"
+                    class="boton"
+                >
+
+                    Póster digital
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             2. REFERENCIANDO
+        ================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                2. Referenciando
+            </h2>
+
+
+            <div class="botones">
+
+
+                <!-- E-BOOK -->
+
+                <a
+                    href="ebook.html"
+                    class="boton"
+                >
+
+                    E-book
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             3. DISEÑANDO
+        ================================== -->
+
+        <section class="seccion">
+
+            <h2>
+                3. Diseñando
+            </h2>
+
+
+            <div class="botones">
+
+
+                <!-- UNIDAD DIDÁCTICA -->
+
+                <a
+                    href="unidad-didactica.html"
+                    class="boton"
+                >
+
+                    Unidad didáctica
+
+                </a>
+
+
+
+                <!-- INFOGRAFÍA -->
+
+                <a
+                    href="infografia.html"
+                    class="boton"
+                >
+
+                    Infografía
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 PROPUESTA METODOLÓGICA
+            ================================== -->
+
+            <div class="subtitulo">
+
+                Propuesta metodológica
+
+            </div>
+
+
+            <div class="botones">
+
+
+                <!-- DISEÑO INSTRUCCIONAL -->
+
+                <a
+                    href="diseno-instruccional.html"
+                    class="boton"
+                >
+
+                    Diseño instruccional
+
+                </a>
+
+
+
+                <!-- PRODUCTO FINAL -->
+
+                <a
+                    href="producto-final.html"
+                    class="boton"
+                >
+
+                    Producto final
+
+                </a>
+
+
+
+                <!-- VIDEO TUTORIAL -->
+
+                <a
+                    href="video-tutorial.html"
+                    class="boton"
+                >
+
+                    Video tutorial
+
+                </a>
+
+
+            </div>
+
+        </section>
+<!-- =========================================
+     4. CRÉDITOS
+========================================= -->
+
+<section class="seccion">
+
+    <h2>4. Créditos</h2>
+
+    <div class="botones">
+
+        <a href="creditos/referencias.html" class="boton">
+            Referencias bibliográficas
+        </a>
+
+        <a href="creditos/apa.html" class="boton">
+            Normas APA 7
+        </a>
+
+        <a href="creditos/agradecimientos.html" class="boton">
+            Agradecimientos
+        </a>
+
+        <a href="creditos/licenciamiento.html" class="boton">
+            Licenciamiento (Creative Commons)
+        </a>
+
+        <a href="creditos/mapa-navegacion.html" class="boton">
+            Mapa de navegación
+        </a>
+
+    </div>
+
+</section>
+
+
+        <!-- =================================
+             REGRESAR AL INICIO
+        ================================== -->
+
+        <div class="regresar">
+
+            <a
+                href="index.html"
+                class="boton-regresar"
+            >
+
+                ← Regresar al inicio
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         PIE DE PÁGINA
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            Institución Educativa Colegio Gibraltar
+        </p>
+
+        <p>
+            Toledo · Norte de Santander · Colombia
+        </p>
+
+        <p>
+            Portafolio digital del trabajo de grado
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

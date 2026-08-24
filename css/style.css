@@ -1,122 +1,618 @@
-* { box-sizing: border-box; }
+/* =========================================================
+   PORTAFOLIO ACADÉMICO
+   DISEÑO Y CONSTRUCCIÓN DE RECURSOS EDUCATIVOS DIGITALES
+   UNIVERSIDAD DE CARTAGENA
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
 :root {
-  --azul: #292b8f;
-  --azul-oscuro: #17195e;
-  --dorado: #f7b33b;
-  --blanco: #ffffff;
-  --gris: #f4f5fb;
-  --texto: #25253a;
+    --azul: #292b8f;
+    --azul-oscuro: #17195e;
+    --dorado: #f7b33b;
+    --blanco: #ffffff;
+    --gris: #f4f5fb;
+    --gris-claro: #eef0fa;
+    --texto: #25253a;
+    --texto-suave: #5f6175;
 }
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--texto);
-  background: var(--gris);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: var(--gris);
+    line-height: 1.6;
 }
+
+
+/* =========================================================
+   ENCABEZADO
+   IMPORTANTE:
+   SE CAMBIA EL FONDO AZUL POR BLANCO PARA QUE
+   EL ESCUDO DE LA UNIVERSIDAD DE CARTAGENA
+   TENGA MAYOR VISIBILIDAD.
+   ========================================================= */
+
+header {
+    background: #ffffff !important;
+    color: var(--azul-oscuro) !important;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR
+   ========================================================= */
+
 .topbar {
-  background: var(--azul-oscuro);
-  color: white;
-  min-height: 68px;
-  padding: 0 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+    width: 100%;
+    min-height: 78px;
+
+    padding: 12px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #ffffff !important;
+    color: var(--azul-oscuro) !important;
+
+    border-bottom: 3px solid var(--dorado);
 }
+
+
+/* =========================================================
+   MARCA
+   ========================================================= */
+
 .brand {
-  color: white;
-  text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 1px;
+    color: var(--azul-oscuro) !important;
+    text-decoration: none;
+
+    font-weight: 800;
+    letter-spacing: 1px;
 }
-.topbar nav { display: flex; gap: 24px; }
-.topbar nav a { color: white; text-decoration: none; font-weight: 600; }
-.hero {
-  min-height: calc(100vh - 68px);
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  background: white;
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.topbar nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  min-height: 700px;
-  object-fit: cover;
+
+.topbar nav a {
+    color: var(--azul-oscuro) !important;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
 }
-.hero-content {
-  padding: 55px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.topbar nav a:hover {
+    color: var(--azul) !important;
+    transform: translateY(-1px);
 }
-.logo { width: 240px; max-width: 70%; margin-bottom: 20px; }
-.eyebrow {
-  color: var(--azul);
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
+
+
+/* =========================================================
+   ENCABEZADO DE LA PORTADA
+   ESTA ES LA PARTE MÁS IMPORTANTE
+   ========================================================= */
+
+/*
+   El problema estaba aquí.
+
+   Tu HTML utiliza:
+
+       <div class="encabezado">
+
+   Por eso modificamos directamente .encabezado.
+*/
+
+.encabezado {
+    background: #ffffff !important;
+    color: var(--azul-oscuro) !important;
+
+    text-align: center;
+
+    padding: 25px 20px 20px;
+
+    border-bottom: 4px solid var(--dorado);
 }
-h1 { line-height: 1.25; margin: 0 0 24px; color: var(--azul-oscuro); }
-.hero-content h1 { font-size: clamp(1.45rem, 2.2vw, 2.35rem); }
-.authors p { margin: 6px 0; }
-.academic { margin: 18px 0 25px; line-height: 1.6; }
-.primary-btn, .menu-btn {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 800;
-  border-radius: 12px;
+
+
+/* =========================================================
+   LOGO UNIVERSIDAD DE CARTAGENA
+   ========================================================= */
+
+.logo {
+    width: 220px !important;
+
+    max-width: 80%;
+
+    height: auto !important;
+
+    max-height: 150px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    opacity: 1 !important;
 }
-.primary-btn {
-  align-self: flex-start;
-  background: var(--dorado);
-  color: var(--azul-oscuro);
-  padding: 14px 22px;
+
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+
+.portada {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background: var(--gris);
 }
-.menu-page, .activity-page { max-width: 1150px; margin: 0 auto; padding: 55px 6%; }
-.section-title { text-align: center; margin-bottom: 35px; }
-.section-title h1 { margin-bottom: 10px; }
-.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
-.menu-group {
-  background: white;
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
-  border-top: 7px solid var(--dorado);
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.contenedor {
+    width: 100%;
+
+    max-width: 1200px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
 }
-.menu-group h2 { color: var(--azul); margin-top: 0; }
+
+
+/* =========================================================
+   TÍTULO DEL TRABAJO
+   ========================================================= */
+
+.titulo {
+    text-align: center;
+
+    padding: 35px 50px 25px;
+
+    background: #ffffff;
+}
+
+.titulo h1 {
+    margin: 0;
+
+    color: var(--azul-oscuro);
+
+    font-size: 28px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   SUBTÍTULOS
+   ========================================================= */
+
+.titulo h2 {
+    color: var(--azul);
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   IMAGEN UNIVERSIDAD
+   ========================================================= */
+
+.imagen-universidad {
+    width: 100%;
+
+    padding: 10px 50px 35px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.imagen-universidad img {
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   AUTORES
+   ========================================================= */
+
+.autores {
+    padding: 35px 50px;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.autores h2 {
+    color: var(--azul-oscuro);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   CONTENEDOR DE AUTORES
+   ========================================================= */
+
+.autores-contenedor {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TARJETAS DE AUTORES
+   ========================================================= */
+
+.autor {
+    background: var(--gris-claro);
+
+    border-radius: 18px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-top: 6px solid var(--dorado);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.autor:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   FOTOGRAFÍA DEL AUTOR
+   ========================================================= */
+
+.autor img {
+    width: 130px;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid var(--azul);
+
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+
+/* =========================================================
+   NOMBRE DEL AUTOR
+   ========================================================= */
+
+.autor h3 {
+    color: var(--azul-oscuro);
+
+    margin: 10px 0;
+
+    font-size: 18px;
+}
+
+.autor p {
+    color: var(--texto-suave);
+
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.primary-btn,
 .menu-btn {
-  display: block;
-  background: var(--azul);
-  color: white;
-  padding: 16px 18px;
-  margin-top: 12px;
-  transition: transform .2s, background .2s;
+    display: inline-block;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    border-radius: 12px;
+
+    transition: all 0.2s ease;
 }
-.menu-btn:hover { background: var(--azul-oscuro); transform: translateY(-2px); }
+
+
+.primary-btn {
+    background: var(--dorado);
+
+    color: var(--azul-oscuro);
+
+    padding: 14px 22px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PÁGINA DEL MENÚ
+   ========================================================= */
+
+.menu-page,
+.activity-page {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 55px 6%;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.section-title h1 {
+    margin-bottom: 10px;
+
+    color: var(--azul-oscuro);
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.menu-group {
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    border-top: 7px solid var(--dorado);
+}
+
+
+.menu-group h2 {
+    color: var(--azul);
+
+    margin-top: 0;
+}
+
+
+.menu-btn {
+    display: block;
+
+    background: var(--azul);
+
+    color: #ffffff;
+
+    padding: 16px 18px;
+
+    margin-top: 12px;
+
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+
+.menu-btn:hover {
+    background: var(--azul-oscuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TARJETAS DE ACTIVIDADES
+   ========================================================= */
+
 .activity-card {
-  background: white;
-  padding: 45px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    background: #ffffff;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
+
+
+/* =========================================================
+   ESPACIOS PARA CONTENIDO
+   ========================================================= */
+
 .placeholder {
-  min-height: 260px;
-  margin: 30px 0;
-  border: 2px dashed #bfc2dd;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-  gap: 10px;
+    min-height: 260px;
+
+    margin: 30px 0;
+
+    border: 2px dashed #bfc2dd;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    gap: 10px;
 }
-.placeholder span { max-width: 600px; color: #666; }
-footer { text-align: center; padding: 25px; background: var(--azul-oscuro); color: white; }
+
+.placeholder span {
+    max-width: 600px;
+
+    color: #666666;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: var(--azul-oscuro);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 850px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-image img { min-height: 300px; max-height: 420px; }
-  .menu-grid { grid-template-columns: 1fr; }
-  .topbar { padding: 0 4%; }
+
+    .topbar {
+        padding: 12px 4%;
+
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+    .topbar nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .portada {
+        padding: 20px 10px;
+    }
+
+    .titulo {
+        padding: 30px 20px 20px;
+    }
+
+    .titulo h1 {
+        font-size: 22px;
+    }
+
+    .imagen-universidad {
+        padding: 10px 20px 25px;
+    }
+
+    .autores {
+        padding: 30px 20px;
+    }
+
+    .autores-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        padding: 25px;
+    }
+
+    .logo {
+        width: 190px !important;
+    }
 }

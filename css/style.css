@@ -615,4 +615,100 @@ footer {
     .logo {
         width: 190px !important;
     }
+}/* =========================================
+   E-BOOK - PRESENTACIÓN
+========================================= */
+
+.ebook-presentacion {
+    width: 100%;
+    max-width: 1100px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.portada-ebook {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portada-ebook:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ebook-descripcion {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 10px 20px 25px;
+}
+
+.ebook-descripcion h2 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.ebook-descripcion p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* BOTÓN GENIALLY */
+
+.boton-genially {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 34px;
+    background: linear-gradient(135deg, #d63384, #c21875);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 8px 20px rgba(194, 24, 117, 0.25);
+    transition: all 0.3s ease;
+}
+
+.boton-genially:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(194, 24, 117, 0.35);
+}
+
+/* NOTA INFORMATIVA */
+
+.nota-ebook {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #eef4ff;
+    border-radius: 20px;
+    color: #173b70;
+    font-size: 14px !important;
+}/* =========================================
+   BOTÓN VOLVER AL MENÚ
+========================================= */
+
+.boton-volver {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 26px;
+    background: #172554;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+.boton-volver:hover {
+    transform: translateY(-3px);
+    background: #243b72;
 }
